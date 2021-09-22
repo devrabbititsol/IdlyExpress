@@ -88,12 +88,8 @@ public class TC_OrderIdly extends BaseClass {
 			printSuccessLogAndReport(logger, "Clicked on Sambar Idly (V)");
 			windowHandle(driver);
 						qf.wait(driver, sambarIdlySelectionObj._iconiconplusc);
-			qf.clickAction(driver, sambarIdlySelectionObj._iconiconplusc);
-			printSuccessLogAndReport(logger, "Clicked on icon icon-plus-c");
 			windowHandle(driver);
 						qf.wait(driver, sambarIdlySelectionObj._iconiconminusc);
-			qf.clickAction(driver, sambarIdlySelectionObj._iconiconminusc);
-			printSuccessLogAndReport(logger, "Clicked on icon icon-minus-c");
 			windowHandle(driver);
 						qf.wait(driver, sambarIdlySelectionObj._quantity);
 			qf.sendKeys(driver, sambarIdlySelectionObj._quantity, configFileObj.getProperty("quantity3"  + i + "input"));
@@ -125,8 +121,6 @@ public class TC_OrderIdly extends BaseClass {
 			printSuccessLogAndReport(logger, "Entered Quantity input: " + configFileObj.getProperty("quantity4"  + i + "input"));
 			windowHandle(driver);
 						qf.wait(driver, idlyVadaSelectionObj._iconiconplusc);
-			qf.clickAction(driver, idlyVadaSelectionObj._iconiconplusc);
-			printSuccessLogAndReport(logger, "Clicked on icon icon-plus-c");
 			windowHandle(driver);
 						qf.wait(driver, idlyVadaSelectionObj._addtoCart);
 			qf.clickAction(driver, idlyVadaSelectionObj._addtoCart, configFileObj.getBooleanProperty("addtoCart4"  + i + "click"));
@@ -150,8 +144,6 @@ public class TC_OrderIdly extends BaseClass {
 			printSuccessLogAndReport(logger, "Clicked on Podi Idly (V)");
 			windowHandle(driver);
 						qf.wait(driver, podiIdlySelectionObj._iconiconplusc);
-			qf.clickAction(driver, podiIdlySelectionObj._iconiconplusc);
-			printSuccessLogAndReport(logger, "Clicked on icon icon-plus-c");
 			windowHandle(driver);
 						qf.wait(driver, podiIdlySelectionObj._addtoCart);
 			qf.clickAction(driver, podiIdlySelectionObj._addtoCart, configFileObj.getBooleanProperty("addtoCart5"  + i + "click"));
