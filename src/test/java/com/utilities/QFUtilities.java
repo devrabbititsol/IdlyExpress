@@ -54,8 +54,13 @@ public class QFUtilities {
 		if(isClick) {
 			By locator = getLocator(xpath);
 			try {
+				wait(driver, xpath);
 				click(driver, locator);
-			} catch(org.openqa.selenium.StaleElementReferenceException ex) {
+			} catch(org.openqa.selenium.NoSuchElementException ex) {
+			wait(driver, xpath);
+			javascriptClick(driver, locator);
+
+		} 	catch(org.openqa.selenium.StaleElementReferenceException ex) {
 				wait(driver, xpath);
 				javascriptClick(driver, locator);
 			} catch (org.openqa.selenium.ElementNotInteractableException ex) {
