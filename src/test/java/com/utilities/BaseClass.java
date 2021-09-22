@@ -340,8 +340,8 @@ public class BaseClass {
 			
 			System.out.println("Chrome Browser is Launched");
 		} else if (browserName.equalsIgnoreCase("mozilla")) {
-			//System.setProperty("webdriver.gecko.driver", geckoFireFoxDriverPath);
-			WebDriverManager.firefoxdriver().setup();
+			System.setProperty("webdriver.gecko.driver", geckoFireFoxDriverPath);
+			//WebDriverManager.firefoxdriver().setup();
 			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 			//			FirefoxProfile profile = new FirefoxProfile();
 			//			//1-Allow, 2-Block, 0-default
