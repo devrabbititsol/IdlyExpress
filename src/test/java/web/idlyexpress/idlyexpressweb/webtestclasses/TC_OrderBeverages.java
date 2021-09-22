@@ -86,8 +86,6 @@ public class TC_OrderBeverages extends BaseClass {
 			printSuccessLogAndReport(logger, "Clicked on Rose Milk");
 			windowHandle(driver);
 						qf.wait(driver, roseMilkSelectionObj._iconiconplusc);
-			qf.clickAction(driver, roseMilkSelectionObj._iconiconplusc);
-			printSuccessLogAndReport(logger, "Clicked on icon icon-plus-c");
 			windowHandle(driver);
 						qf.wait(driver, roseMilkSelectionObj._addtoCart);
 			qf.clickAction(driver, roseMilkSelectionObj._addtoCart, configFileObj.getBooleanProperty("addtoCart3"  + i + "click"));
