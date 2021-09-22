@@ -63,12 +63,8 @@ public class TC_OrderIdly extends BaseClass {
 			printSuccessLogAndReport(logger, "Clicked on Idly (V)");
 			windowHandle(driver);
 						qf.wait(driver, idlySelectionObj._iconiconplusc);
-			qf.clickAction(driver, idlySelectionObj._iconiconplusc);
-			printSuccessLogAndReport(logger, "Clicked on icon icon-plus-c");
 			windowHandle(driver);
 						qf.wait(driver, idlySelectionObj._iconiconminusc);
-			qf.clickAction(driver, idlySelectionObj._iconiconminusc);
-			printSuccessLogAndReport(logger, "Clicked on icon icon-minus-c");
 			windowHandle(driver);
 						qf.wait(driver, idlySelectionObj._addtoCart);
 			qf.clickAction(driver, idlySelectionObj._addtoCart, configFileObj.getBooleanProperty("addtoCart2"  + i + "click"));
