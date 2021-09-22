@@ -63,8 +63,6 @@ public class TC_OrderBeverages extends BaseClass {
 			printSuccessLogAndReport(logger, "Clicked on Mango Lassi");
 			windowHandle(driver);
 						qf.wait(driver, mangoLassiSelectionObj._iconiconplusc);
-			qf.clickAction(driver, mangoLassiSelectionObj._iconiconplusc);
-			printSuccessLogAndReport(logger, "Clicked on icon icon-plus-c");
 			windowHandle(driver);
 						qf.wait(driver, mangoLassiSelectionObj._addtoCart);
 			qf.clickAction(driver, mangoLassiSelectionObj._addtoCart, configFileObj.getBooleanProperty("addtoCart2"  + i + "click"));
