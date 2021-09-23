@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Main Test Suite" parallel="tests">
+	<test name="nulltest">
+  	<parameter name="browser" value="null"/>
+		<classes>			<class name="api.idlyexpress.picstarapis.apitestclasses.TC_CreateOrder" />			<class name="api.idlyexpress.picstarapis.apitestclasses.TC_UpdateOrder" />			<class name="api.idlyexpress.picstarapis.apitestclasses.TC_GetOrderDetails" />
+			<class name="com.fileupload.ReportUpload" />
+		</classes>
+	</test>
+</suite>
