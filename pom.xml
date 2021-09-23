@@ -357,7 +357,7 @@
 				</plugins>
 			</build>
 		</profile>
-	</profiles>
+	
 		<profile>
 			<id>ts_createupdateget</id>
 			<build>
@@ -417,6 +417,7 @@
 				</plugins>
 			</build>
 		</profile>
+</profiles>
 
 </project>
 
