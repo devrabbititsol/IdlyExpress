@@ -3,7 +3,7 @@
 <suite name="Main Test Suite" parallel="tests">
 	<test name="nulltest">
   	<parameter name="browser" value="null"/>
-		<classes>			<class name="api.idlyexpress.picstarapis.apitestclasses.TC_CreateOrder" />			<class name="api.idlyexpress.picstarapis.apitestclasses.TC_UpdateOrder" />			<class name="api.idlyexpress.picstarapis.apitestclasses.TC_GetOrderDetails" />
+		<classes>			<class name="api.idlyexpress.apis.apitestclasses.TC_CreateOrder" />			<class name="api.idlyexpress.apis.apitestclasses.TC_GetOrderDetails" />			<class name="api.idlyexpress.apis.apitestclasses.TC_UpdateOrder" />
 			<class name="com.fileupload.ReportUpload" />
 		</classes>
 	</test>
