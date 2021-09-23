@@ -1,4 +1,4 @@
-package web.idlyexpress.idlyexpressweb.webpageclasses;
+package web.idlyexpress.web.webpageclasses;
 
 public class OrderConfirmedScreen { 
 
