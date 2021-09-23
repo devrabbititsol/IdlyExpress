@@ -111,13 +111,15 @@ public class TC_OrderBeverages extends BaseClass {
 						qf.sendKeys(driver, checkoutScreenObj._yourfirstnamehere, configFileObj.getProperty("yourfirstnamehere4"  + i + "input"));
 			printSuccessLogAndReport(logger, "Entered Your first name here input: " + configFileObj.getProperty("yourfirstnamehere4"  + i + "input"));
 			windowHandle(driver);
-						qf.sendKeys(driver, checkoutScreenObj._yourlastnamehere, configFileObj.getProperty("yourlastnamehere4"  + i + "input"));
+						qf.wait(driver, checkoutScreenObj._yourlastnamehere);
+			qf.sendKeys(driver, checkoutScreenObj._yourlastnamehere, configFileObj.getProperty("yourlastnamehere4"  + i + "input"));
 			printSuccessLogAndReport(logger, "Entered Your last name here input: " + configFileObj.getProperty("yourlastnamehere4"  + i + "input"));
 			windowHandle(driver);
 						qf.sendKeys(driver, checkoutScreenObj._youremailhere, configFileObj.getProperty("youremailhere4"  + i + "input"));
 			printSuccessLogAndReport(logger, "Entered Your email here input: " + configFileObj.getProperty("youremailhere4"  + i + "input"));
 			windowHandle(driver);
-						qf.sendKeys(driver, checkoutScreenObj._yourphonenumberhere, configFileObj.getProperty("yourphonenumberhere4"  + i + "input"));
+						qf.wait(driver, checkoutScreenObj._yourphonenumberhere);
+			qf.sendKeys(driver, checkoutScreenObj._yourphonenumberhere, configFileObj.getProperty("yourphonenumberhere4"  + i + "input"));
 			printSuccessLogAndReport(logger, "Entered Your phone number here input: " + configFileObj.getProperty("yourphonenumberhere4"  + i + "input"));
 			windowHandle(driver);
 						qf.clickAction(driver, checkoutScreenObj._cOD);
@@ -126,6 +128,20 @@ public class TC_OrderBeverages extends BaseClass {
 						qf.clickAction(driver, checkoutScreenObj._cONTINUE, configFileObj.getBooleanProperty("cONTINUE4"  + i + "click"));
 			if(configFileObj.getBooleanProperty("cONTINUE4"  + i + "click"))
 			printSuccessLogAndReport(logger, "Clicked on CONTINUE");
+
+		} catch (Exception e) {
+			isElementDispalyed = false;
+			printFailureLogAndReport( logger,  "Element is not found" + e.getLocalizedMessage());
+		}
+	}
+
+	private void orderConfirmedScreenTest(int i) throws Exception {
+
+		try { 
+			OrderConfirmedScreen orderConfirmedScreenObj = new OrderConfirmedScreen();
+			windowHandle(driver);
+						qf.clickAction(driver, orderConfirmedScreenObj._yourorderhasbeenplacedsuccessfully);
+			printSuccessLogAndReport(logger, "Clicked on Your order has been placed successfully");
 
 		} catch (Exception e) {
 			isElementDispalyed = false;
@@ -143,6 +159,7 @@ public class TC_OrderBeverages extends BaseClass {
 			if(isElementDispalyed) {mangoLassiSelectionTest(datasets);}
 			if(isElementDispalyed) {roseMilkSelectionTest(datasets);}
 			if(isElementDispalyed) {checkoutScreenTest(datasets);}
+			if(isElementDispalyed) {orderConfirmedScreenTest(datasets);}
 			tearDown();
 		}	}
 
