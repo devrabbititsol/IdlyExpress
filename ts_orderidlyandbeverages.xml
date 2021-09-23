@@ -3,7 +3,7 @@
 <suite name="Main Test Suite" parallel="tests">
 	<test name="chrometest">
   	<parameter name="browser" value="chrome"/>
-		<classes>			<class name="web.idlyexpress.idlyexpressweb.webtestclasses.TC_OrderBeverages" />			<class name="web.idlyexpress.idlyexpressweb.webtestclasses.TC_OrderIdly" />
+		<classes>			<class name="web.idlyexpress.web.webtestclasses.TC_OrderBeverages" />			<class name="web.idlyexpress.web.webtestclasses.TC_OrderIdly" />
 			<class name="com.fileupload.ReportUpload" />
 		</classes>
 	</test>
